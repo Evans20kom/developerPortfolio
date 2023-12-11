@@ -1,3 +1,11 @@
+:root {
+  --main_colour: #8E9AAF;
+  --inverse_colour: #FEEAFA;
+  --third_colour: #CBC0D3;
+  /* Colour scheme - Trending Colours: 
+Website, squarespace-coolours - Idea provided by: Mike Thomas */
+}
+
 * {
   box-sizing: border-box;
 }
@@ -9,15 +17,42 @@ body {
   line-height: 1.5;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
+  font-family: arial, helvetica, sans-serif;
+  color: var(--main_colour);
   margin: 0;
 }
 
 p {
   margin: 0;
 }
+
+#contact {
+  margin: 50px;
+  display: grid;
+  grid-template-rows: 50px 50px 50px 50px 50px;
+  grid-template-areas:
+  "contactHeader . . . . ."
+  "contactHeader phoneNumber email github socialMedia1 socialMedia2";
+}
+  
+
+  @media only screen and (max-width: 600px) {
+    #contact {
+      grid-template-areas:
+      "contactHeader . . . . ."
+      "phoneNumber email github socialMedia1 socialMedia2";
+    }
+  }
+
+  @media only screen and (max-width: 1000px) {
+    #contact {
+      grid-template-areas:
+        "contactHeader"
+        "phoneNumber"
+        "email"
+        "github"
+        "socialMedia1"
+        "socialMedia2";
+            }
+  }
