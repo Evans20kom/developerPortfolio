@@ -20,12 +20,33 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: arial, helvetica, sans-serif;
   color: var(--main_colour);
-  margin: 0;
+  margin: 0px;
 }
 
 p {
-  margin: 0;
+  font-family: arial, helvetica, sans-serif;
+  color: var(--main_colour);
+  margin: 10px 0px;
 }
+
+#about #aboutHeader {
+  grid-area: aboutHeader;
+}
+
+#about #aboutParagraph {
+  grid-area: aboutParagraph;
+  
+}
+
+#about {
+  margin: 50px;
+  display: grid;
+  grid-template-rows: 50px 50px;
+  grid-template-areas:
+  "aboutHeader aboutParagraph";
+}
+
+
 
 #contact {
   margin: 50px;
@@ -43,16 +64,10 @@ p {
       "contactHeader . . . . ."
       "phoneNumber email github socialMedia1 socialMedia2";
     }
-  }
-
-  @media only screen and (max-width: 1000px) {
-    #contact {
+    
+    #about {
       grid-template-areas:
-        "contactHeader"
-        "phoneNumber"
-        "email"
-        "github"
-        "socialMedia1"
-        "socialMedia2";
+        "aboutHeader" 
+        "aboutParagraph";
             }
   }
