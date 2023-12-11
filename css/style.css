@@ -1,7 +1,7 @@
 :root {
   --main_colour: #8E9AAF;
-  --inverse_colour: #FEEAFA;
-  --third_colour: #CBC0D3;
+  --inverse_colour: #CBC0D3;
+  --third_colour: #FEEAFA ;
   /* Colour scheme - Trending Colours: 
 Website, squarespace-coolours - Idea provided by: Mike Thomas */
 }
@@ -15,6 +15,7 @@ body {
   padding: 0;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   line-height: 1.5;
+  background-color: var(--third_colour);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -46,7 +47,50 @@ p {
   "aboutHeader aboutParagraph";
 }
 
+.mainContentImage img {
+  border: 5px solid var(--inverse_colour);
+}  
 
+#work #workHeader {
+grid-area: workHeader;
+padding: 20px 20px 20px 20px;
+}
+
+#work #workImage1 {
+  grid-area: workImage1;
+  padding: 20px 20px 20px 20px;
+}
+
+#work #workImage2 {
+  grid-area: workImage2;
+  padding: 20px 20px 20px 20px;
+}
+
+#work #workImage3 {
+  grid-area: workImage3;
+  padding: 20px 20px 20px 20px;
+}
+
+#work #workImage4 {
+  grid-area: workImage4;
+  padding: 20px 20px 20px 20px;
+}
+
+#work #workImage5 {
+  grid-area: workImage5;
+  padding: 20px;
+}
+
+#work {
+  margin: 50px;
+  display: grid;
+  grid-template-rows: repeat(3, 200px);
+  grid-template-columns: fit-content(100%);
+  grid-template-areas:
+  "workHeader workImage1 workImage1"
+  ". workImage2 workImage3"
+  ". workImage4 workImage5";
+}
 
 #contact {
   margin: 50px;
