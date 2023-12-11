@@ -3,8 +3,7 @@
   --inverse_colour: #FEEAFA;
   --third_colour: #CBC0D3;
   /* Colour scheme - Trending Colours: 
-Website, squarespace-coolours. 
-Idea provided by: Mike Thomas */
+Website, squarespace-coolours - Idea provided by: Mike Thomas */
 }
 
 * {
@@ -18,13 +17,14 @@ body {
   line-height: 1.5;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, {
+  font-family: arial, helvetica, sans-serif;
+  color: var(--main_colour);
   margin: 0;
+}
+
+a {
+  text-decoration: none;
 }
 
 p {
