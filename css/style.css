@@ -1,4 +1,11 @@
-/* Colour scheme - Trending Colours: visit website, squarespace-coolours. Kudos Mike Thomas */
+:root {
+  --main_colour: #8E9AAF;
+  --inverse_colour: #FEEAFA;
+  --third_colour: #CBC0D3;
+  /* Colour scheme - Trending Colours: 
+Website, squarespace-coolours. 
+Idea provided by: Mike Thomas */
+}
 
 * {
   box-sizing: border-box;
