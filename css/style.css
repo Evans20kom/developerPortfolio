@@ -23,30 +23,36 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
-a {
-  text-decoration: none;
-}
-
 p {
   margin: 0;
 }
 
-@media only screen and (max-width: 1000px) {
-  #page-section-contact {
-    grid-template-areas:
-    "contact_header phone_number email github social_media_1 social_media_2";
+#contact {
+  margin: 50px;
+  display: grid;
+  grid-template-rows: 50px 50px 50px 50px 50px;
+  grid-template-areas:
+  "contactHeader . . . . ."
+  "contactHeader phoneNumber email github socialMedia1 socialMedia2";
+}
+  
+
+  @media only screen and (max-width: 600px) {
+    #contact {
+      grid-template-areas:
+      "contactHeader . . . . ."
+      "phoneNumber email github socialMedia1 socialMedia2";
+    }
   }
 
-}
-
-#page-section-contact {
-  grid-template-rows: 300px 300px 300px 300px 300px;
-  grid-template-columns: 1fr;
-  grid-template-areas:
-  "contact_header"
-  "phone_number"
-  "email"
-  "github"
-  "social_media_1"
-  "social_media_2";
-}
+  @media only screen and (max-width: 1000px) {
+    #contact {
+      grid-template-areas:
+        "contactHeader"
+        "phoneNumber"
+        "email"
+        "github"
+        "socialMedia1"
+        "socialMedia2";
+            }
+  }
