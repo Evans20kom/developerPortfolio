@@ -30,7 +30,14 @@ p {
   margin: 10px 0px;
 }
 
-#about #aboutHeader {
+.page-section {
+display: flex;
+flex-direction: row;
+align-items: stretch;
+justify-content: space-between;
+}
+
+/*#about #aboutHeader {
   grid-area: aboutHeader;
 }
 
@@ -115,3 +122,4 @@ padding: 20px 20px 20px 20px;
         "aboutParagraph";
             }
   }
+  */
